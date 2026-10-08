@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: order-service
+app:
+  version: v1
+order:
+  vip-strategy: v1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+    metadata-map:
+      version: ${app.version}

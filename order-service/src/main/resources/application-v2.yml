@@ -1,0 +1,6 @@
+server:
+  port: 8084
+app:
+  version: v2
+order:
+  vip-strategy: v2
